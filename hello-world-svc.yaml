@@ -6,7 +6,9 @@
       app: hello-world
   spec:
     ports:
-      - port: 8080
+      - protocol: TCP
+        port: 8080 
+        targetPort: 3000 
     selector:
       app: hello-world
     type: LoadBalancer
