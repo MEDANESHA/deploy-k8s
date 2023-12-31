@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
   - name: hello-world-1
-    image: mycontainerregistryteldahtest.azurecr.io/helloworld:latest
+    image: mycontainerregistryteldahtest.azurecr.io/helloworld:15
