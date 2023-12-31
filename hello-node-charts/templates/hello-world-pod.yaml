@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod-1
+  namespace: app
+spec:
+  containers:
+  - name: hello-world-1
+    image: mycontainerregistryteldahtest.azurecr.io/helloworld:15
