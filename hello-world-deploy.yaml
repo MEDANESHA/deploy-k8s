@@ -11,14 +11,10 @@ spec:
       app: hello-world
   strategy:
     type: Recreate
-  selector:
-    matchLabels:
-      app: hello-world
   template:
     metadata:
       labels:
         app: hello-world
-        
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9101"
@@ -26,7 +22,6 @@ spec:
       containers:
       - name: new-hello-world
         image: mycontainerregistryteldahtest.azurecr.io/helloworld:15
-        # imagePullPolicy: Never
         ports:
         - name: http
           containerPort: 8080
@@ -48,4 +43,3 @@ spec:
             path: /ready
             port: probe
           periodSeconds: 5
-
