@@ -1,27 +1,62 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: goprom
+  labels:
+    app: goprom
+spec:
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+  selector:
+    app: goprom
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: goprom-metrics
+  labels:
+    app: goprom
+spec:
+  type: NodePort
+  ports:
+  - name: metrics
+    port: 9101
+    targetPort: metrics
+  selector:
+    app: goprom
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: goprom
   labels:
-    app: hello-world
+    app: goprom
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: goprom
   strategy:
     type: Recreate
+  selector:
+    matchLabels:
+      app: goprom
   template:
     metadata:
       labels:
-        app: hello-world
+        app: goprom
+        version: v1.0.0
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9101"
     spec:
       containers:
-      - name: new-hello-world
-        image: mycontainerregistryteldahtest.azurecr.io/helloworld:15
+      - name: goprom
+        image: epsdevops/goprom
+        # imagePullPolicy: Never
         ports:
         - name: http
           containerPort: 8080
