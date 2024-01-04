@@ -18,7 +18,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: mycontainerregistryteldahtest.azurecr.io/helloworld:18
+      - image: mycontainerregistryteldahtest.azurecr.io/helloworld:19
         name: new-hello-world
         ports:
         - containerPort: 8080
