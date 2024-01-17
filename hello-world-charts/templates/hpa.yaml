@@ -3,6 +3,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "hello-world-charts.fullname" . }}
+  namespace: {{ .Values.service.namespace }}
   labels:
     {{- include "hello-world-charts.labels" . | nindent 4 }}
 spec:
