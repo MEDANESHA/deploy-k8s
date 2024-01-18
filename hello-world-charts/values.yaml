@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: mycontainerregistryteldahtest.azurecr.io/helloworld
+  repository: mycontainerregistryteldahtest.azurecr.io/helloworld:23
   pullPolicy: IfNotPresent
   tag: "hello-img"
 
