@@ -1,1 +1,4 @@
-./hello-world*.yaml
+hello-world-deploy.yaml
+hello-world-hpa.yaml
+hello-world-pod.yaml
+hello-world-svc.yaml
