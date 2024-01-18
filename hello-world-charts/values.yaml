@@ -41,7 +41,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 8080
-  namespace: your-namespace
+  namespace: app
 
 ingress:
   enabled: false
