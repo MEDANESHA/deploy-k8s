@@ -5,10 +5,13 @@
 replicaCount: 2
 
 image:
-  repository: medanes/hello_flask
+  repository: mycontainerregistryteldahtest.azurecr.io/helloworld
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "58"
 
+
+imagePullSecrets:
+  - name: acr-secret 
 
 
 nameOverride: ""
@@ -41,7 +44,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8080
+  port: 3000
   namespace: app
 
 ingress:
