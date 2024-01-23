@@ -5,9 +5,9 @@
 replicaCount: 2
 
 image:
-  repository: mycontainerregistryteldahtest.azurecr.io/helloworld:58
+  repository: mycontainerregistryteldahtest.azurecr.io/helloworld
   pullPolicy: IfNotPresent
-  tag: "hello-img"
+  tag: "58"
 
 imagePullSecrets:
   - name: acr-secret
