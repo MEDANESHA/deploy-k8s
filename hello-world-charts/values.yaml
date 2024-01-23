@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: nginx
+  repository: medanes/hello_flask
   pullPolicy: IfNotPresent
   tag: "latest"
 
