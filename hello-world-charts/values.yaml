@@ -5,9 +5,9 @@
 replicaCount: 2
 
 image:
-  repository: mycontainerregistryteldahtest.azurecr.io/helloworld
+  repository: nginx
   pullPolicy: IfNotPresent
-  tag: "58"
+  tag: "1.21.3"
 
 
 imagePullSecrets:
