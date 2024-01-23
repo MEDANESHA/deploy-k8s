@@ -9,8 +9,6 @@ image:
   pullPolicy: IfNotPresent
   tag: "58"
 
-imagePullSecrets:
-  - name: acr-secret
 
 
 nameOverride: ""
