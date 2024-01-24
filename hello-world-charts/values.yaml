@@ -7,7 +7,7 @@ replicaCount: 2
 image:
   repository: mycontainerregistryteldahtest.azurecr.io/helloworld
   pullPolicy: IfNotPresent
-  tag: "61"
+  tag: "62"
 
 
 imagePullSecrets:
